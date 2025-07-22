@@ -19,6 +19,25 @@ title: FAQs
   depositors proportional to their share in the vault.
 </Accordion>
 
+<Accordion title="How does profit sharing work?">
+  Paradex Vaults include a profit-sharing mechanism that compensates vault owners when users exit with a profit.
+
+  When a user deposits into a vault, they receive vault tokens based on the current token price (e.g., if token price = 1, $100 = 100 tokens). When the user withdraws:
+
+  - If the token price has increased (i.e., the user exits in profit), a portion of their profit is paid to the vault owner as <strong>profit share</strong>.
+  - The profit share is calculated as a percentage of the user’s profit at withdrawal and is paid in <strong>vault tokens</strong>, not dollars.
+  - If the user exits at a loss or breakeven, no profit share is paid.
+
+  <em>Example:</em><br />
+  A user deposits $100 at token price = 1 (receives 100 tokens). If token price increases to 2, the 100 tokens are worth $200. With a 10% profit share:
+  
+  - Profit = $100 ⇒ profit share = $10 ⇒ vault owner receives 10 vault tokens.
+  - The user’s withdrawal burns 90 tokens (redeemed for $180) and transfers 10 tokens to the vault owner.
+
+  The vault owner can later redeem or keep those tokens.
+</Accordion>
+
+
 <Accordion title="How long after my deposit can I withdraw my funds?">
   Because withdrawal transactions cannot be performed in the same block as a
   deposit, there is currently around a **5 minute** window where you will not be
